@@ -21,8 +21,10 @@ connectDB();
 
 
 // Home route
+app.use(express.static(__dirname));
+
 app.get("/", (req, res) => {
-    res.send("Contact Management System is running");
+    res.sendFile(__dirname + "/index.html");
 });
 
 
